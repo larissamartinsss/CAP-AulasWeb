@@ -1,16 +1,17 @@
 function alertaInicio(){
-    alert("Seja bem-vindo");
+    console.log("Seja bem-vindo");
 }
-window.onload=function(){ /*funcão anonima*/
-    alertaInicio();
-} 
-
 function salvar(){
-    console.log('Função funcionando');
+    console.log('Funcao funcionando');
     let input_nome = document.getElementById('nome');
     console.log(input_nome.value);
+    console.log(input_nome.type);
     console.log(input_nome.id);
+    let div = document.getElementById('nome-preenchido');
+    div.innerHTML = div.innerHTML + "<h1>" + input_nome.value + "</h1>";
+    input_nome.value = "";
+}
 
-    let h2 = document.getElementById('nome-preenchido');
-    h2.innerHTML = input_nome.value;
+window.onload=function (){
+    alertaInicio();
 }
